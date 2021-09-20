@@ -10,4 +10,4 @@ logging.basicConfig(
 
 LOGGER = logging.getLogger(__name__)
 
-SDbot = Client("SDSongBot", bot_token=BOT_TOKEN, api_hash=API_HASH, api_id=API_ID)
+SDbot = Client("DeepuzMucialz", bot_token=BOT_TOKEN, api_hash=API_HASH, api_id=API_ID)
