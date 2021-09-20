@@ -66,7 +66,6 @@ def song(client, message):
                 )
             ],
         )
-    raise StopPropagation
 
         rep = '** 🤪 Uᴘʟᴏᴀᴅᴇᴅ Bʏ\n\t\t @YTAudio_Channel **'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
