@@ -13,7 +13,7 @@ def time_to_seconds(time):
     stringt = str(time)
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(':'))))
 
-@app.on_message(filters.command( ))
+@app.on_message(filters.command(" "))
 def (client, message):
 
     user_id = message.from_user.id 
