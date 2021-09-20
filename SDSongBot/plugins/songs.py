@@ -1,5 +1,3 @@
-# Plugin by @Mr_Dark_Prince
-#SDBOTs <https://t.me/SDBOTs_Inifinity>
 
 import os
 import requests
@@ -15,8 +13,8 @@ def time_to_seconds(time):
     stringt = str(time)
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(':'))))
 
-@app.on_message(filters.command('song'))
-def song(client, message):
+@app.on_message(filters.command( ))
+def (client, message):
 
     user_id = message.from_user.id 
     user_name = message.from_user.first_name 
@@ -26,7 +24,7 @@ def song(client, message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply('🔎 Finding the song...')
+    m = message.reply('<b>🔎 Fɪɴᴅɪɴɢ ᴛʜᴇ sᴏɴɢ....</b>')
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -44,17 +42,17 @@ def song(client, message):
 
     except Exception as e:
         m.edit(
-            "❌ Found Nothing.\n\nTry another keywork or maybe spell it properly."
+            "<b>🥺 Sᴏʀʀʏ ɴᴏᴛʜɪɴɢ ɪs ғᴏᴜɴᴅ.\n\nTʀʏ ᴀɴᴏᴛʜᴇʀ ᴋᴇʏᴡᴏʀᴇᴅ Oʀ ᴍᴀʏʙᴇ sᴘᴇʟʟ ɪᴛ ᴘʀᴏᴘᴇʀʟʏ 🤭.</b>"
         )
         print(str(e))
         return
-    m.edit("📥 Downloading the song by @SDbotsz 📥")
+    m.edit("<b>🤓 Dᴏᴡɴʟᴏᴅᴇᴅ Bʏ @YTAudio_Channel</b>")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = '**~ Uploaded by @SDbotsz ~**'
+        rep = '**~ 🤪 Uᴘʟᴏᴀᴅᴇᴅ Bʏ @YTAudio_Channel ~**'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
@@ -62,7 +60,7 @@ def song(client, message):
         s = message.reply_audio(audio_file, caption=rep, thumb=thumb_name, parse_mode='md', title=title, duration=dur)
         m.delete()
     except Exception as e:
-        m.edit('❌ Error')
+        m.edit('<b>🙄 Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ</b>')
         print(e)
 
     try:
