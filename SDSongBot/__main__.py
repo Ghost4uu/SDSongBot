@@ -8,12 +8,11 @@ from SDSongBot import SDbot as app
 from SDSongBot import LOGGER
 
 pm_start_text = """
-🇭 🇪 🇾  [{}](tg://user?id={}) ʜᴏᴡ aгε ʏᴏᴜ!! 𝕀𝕞 𝐃𝐞𝐞𝐩𝐮𝐳𝐌𝐮𝐬𝐢𝐜𝐚𝐥 ʙᴏᴛ. ℂ𝕣𝕖𝕒𝕥𝕖𝕕 ᖴOᖇ @YTAudio_Channel, 🇾 🇴 🇺  ᑕᗩᑎ 𝔻𝕠𝕨𝕟𝕝𝕠𝕒𝕕 Sᴏɴɢᴀ ᴀɴᴅ Mᴜsɪᴄ ᖴᖇOᗰ ᕼᗴᖇᗴ. 🇮 🇲   𝐴𝑙𝑤𝑎𝑦𝑠 ʜᴇʀᴇ ᖴOᖇ 𝕐𝕠𝕦.
+🇭 🇪 🇾  [{}](tg://user?id={}) ʜᴏᴡ aгε ʏᴏᴜ!! 🤓Iᴍ 𝔻𝕖𝕖𝕡𝕦𝕫𝕄𝕦𝕤𝕚𝕔𝕒𝕝 Bᴏᴛ.\n 😜Cʀᴇᴀᴛᴇᴅ Fᴏʀ @YTAudio_Channel, 🇾 🇴 🇺  Cᴀɴ Dɪᴡɴʟᴏᴀᴅ Sᴏɴɢᴀ ᴀɴᴅ Mᴜsɪᴄ Fʀᴏᴍ Hᴇʀᴇ.\n ✨Iᴍ Aʟᴡᴀʏs Hᴇʀᴇ Fᴏʀ Yᴏᴜ.
 
-😉 Just send me the song name you want to download.😋
-      ```/song Faded```
+😌Jᴜsᴛ Sᴇɴᴅ Mᴇ Tʜᴇ Nᴀᴍᴇ Oғ Sᴏɴɢ/Mᴜsɪᴄ Tʜᴀᴛ Yᴏᴜ Wᴀɴᴛ Tᴏ Dᴏᴡɴʟᴏᴀᴅ. Usᴇ🙄👉 ```/song ``` Tʜɪs Cᴏᴍᴍᴀɴᴅ Bᴇғᴏʀᴇ Sᴏɴɢ/Mᴜsɪᴄ Nᴀᴍᴇ.\n 😜Fᴏʀ Exᴀᴍᴘʟᴇ  ```/song stay``` 
       
-A bot by @SDBotsz 🇱🇰
+A Mᴜsɪᴄ Dᴏᴡɴʟᴏᴅᴇʀ Bᴏᴛ Bʏ <b>Dᴇᴇᴘᴜᴢ</b>
 """
 
 @app.on_message(filters.command("start"))
@@ -29,7 +28,7 @@ async def start(client, message):
                         text="🦋Dᴏᴡɴʟᴏᴀᴅ🦋", url="https://t.me/YTAudio_Channel"
                     ),
                     InlineKeyboardButton(
-                        text="Dev 🔥", url="https://t.me/Darkridersslk"
+                        text="👀Sᴜᴘᴘᴏʀᴛ👀", url="https://t.me/Darkridersslk"
                     )
                 ]
             ]
