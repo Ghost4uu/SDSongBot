@@ -8,12 +8,12 @@ from SDSongBot import SDbot as app
 from SDSongBot import LOGGER
 
 pm_start_text = """
-Hey [{}](tg://user?id={}), I'm Song Downloader Bot 🎵
+<b>🇭 🇪 🇾  [{}](tg://user?id={}) ʜᴏᴡ aгε ʏᴏᴜ!! 𝕀𝕞 𝐃𝐞𝐞𝐩𝐮𝐳𝐌𝐮𝐬𝐢𝐜𝐚𝐥 ʙᴏᴛ. ℂ𝕣𝕖𝕒𝕥𝕖𝕕 ᖴOᖇ @YTAudio_Channel, 🇾 🇴 🇺  ᑕᗩᑎ 𝔻𝕠𝕨𝕟𝕝𝕠𝕒𝕕 Sᴏɴɢᴀ ᴀɴᴅ Mᴜsɪᴄ ᖴᖇOᗰ ᕼᗴᖇᗴ. 🇮 🇲   𝐴𝑙𝑤𝑎𝑦𝑠 ʜᴇʀᴇ ᖴOᖇ 𝕐𝕠𝕦.
 
 😉 Just send me the song name you want to download.😋
-      eg:```/song Faded```
+      </b>```/song Faded```
       
-A bot by @SDBotsz 🇱🇰
+<b>A bot by @SDBotsz 🇱🇰</b>
 """
 
 @app.on_message(filters.command("start"))
