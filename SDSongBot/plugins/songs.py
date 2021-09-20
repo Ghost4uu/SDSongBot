@@ -41,7 +41,7 @@ def song(client, message):
                         title=album.tracks[num].title,
                         duration=album.tracks[num].duration,
                         performer=album.artist,
-                    )
+                    )]
 
     except Exception as e:
         m.edit(
