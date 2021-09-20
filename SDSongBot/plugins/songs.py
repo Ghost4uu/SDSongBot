@@ -35,6 +35,13 @@ def song(client, message):
         thumb_name = f'thumb{title}.jpg'
         thumb = requests.get(thumbnail, allow_redirects=True)
         open(thumb_name, 'wb').write(thumb.content)
+        attributes=[
+                    DocumentAttributeAudio(
+                        voice=False,
+                        title=album.tracks[num].title,
+                        duration=album.tracks[num].duration,
+                        performer=album.artist,
+                    )
 
         duration = results[0]["duration"]
         url_suffix = results[0]["url_suffix"]
