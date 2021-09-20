@@ -24,7 +24,7 @@ def song(client, message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply('<b>🔎 Fɪɴᴅɪɴɢ ᴛʜᴇ sᴏɴɢ....</b>')
+    m = message.reply_photo(photo="https://telegra.ph/file/42f27692a140e79b69c04.jpg",caption="<b>🔎 Fɪɴᴅɪɴɢ ᴛʜᴇ sᴏɴɢ....</b>")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -41,8 +41,8 @@ def song(client, message):
         views = results[0]["views"]
 
     except Exception as e:
-        m.edit = await message.reply_photo(
-          photo="https://telegra.ph/file/42f27692a140e79b69c04.jpg",caption="<b>🥺 Sᴏʀʀʏ ɴᴏᴛʜɪɴɢ ɪs ғᴏᴜɴᴅ.\n\nTʀʏ ᴀɴᴏᴛʜᴇʀ ᴋᴇʏᴡᴏʀᴇᴅ Oʀ ᴍᴀʏʙᴇ sᴘᴇʟʟ ɪᴛ ᴘʀᴏᴘᴇʀʟʏ 🤪.</b>"
+        m.edit(
+          "<b>🥺 Sᴏʀʀʏ ɴᴏᴛʜɪɴɢ ɪs ғᴏᴜɴᴅ.\n\nTʀʏ ᴀɴᴏᴛʜᴇʀ ᴋᴇʏᴡᴏʀᴇᴅ Oʀ ᴍᴀʏʙᴇ sᴘᴇʟʟ ɪᴛ ᴘʀᴏᴘᴇʀʟʏ 🤪.</b>"
         )
         print(str(e))
         return
