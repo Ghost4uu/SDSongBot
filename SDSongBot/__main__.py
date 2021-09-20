@@ -36,7 +36,7 @@ async def start(client, message):
         )
     else:
         btn = None
-    await message.reply(pm_start_text.format(name, user_id), reply_markup=btn)
+    await message.reply_photo(photo="https://telegra.ph/file/fe15aa4dc983df363db11.jpg",pm_start_text.format(name, user_id), reply_markup=btn)
 
 
 app.start()
