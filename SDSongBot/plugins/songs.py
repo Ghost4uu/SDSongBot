@@ -42,7 +42,7 @@ def song(client, message):
 
     except Exception as e:
         m.edit(
-            "<b>🥺 Sᴏʀʀʏ ɴᴏᴛʜɪɴɢ ɪs ғᴏᴜɴᴅ.\n\nTʀʏ ᴀɴᴏᴛʜᴇʀ ᴋᴇʏᴡᴏʀᴇᴅ Oʀ ᴍᴀʏʙᴇ sᴘᴇʟʟ ɪᴛ ᴘʀᴏᴘᴇʀʟʏ 🤪.</b>"
+         photo="https://telegra.ph/file/42f27692a140e79b69c04.jpg",caption="<b>🥺 Sᴏʀʀʏ ɴᴏᴛʜɪɴɢ ɪs ғᴏᴜɴᴅ.\n\nTʀʏ ᴀɴᴏᴛʜᴇʀ ᴋᴇʏᴡᴏʀᴇᴅ Oʀ ᴍᴀʏʙᴇ sᴘᴇʟʟ ɪᴛ ᴘʀᴏᴘᴇʀʟʏ 🤪.</b>"
         )
         print(str(e))
         return
