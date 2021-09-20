@@ -8,11 +8,11 @@ from SDSongBot import SDbot as app
 from SDSongBot import LOGGER
 
 pm_start_text = """
-🇭 🇪 🇾  [{}](tg://user?id={}) ʜᴏᴡ aгε ʏᴏᴜ!! 🤓Iᴍ 𝔻𝕖𝕖𝕡𝕦𝕫𝕄𝕦𝕤𝕚𝕔𝕒𝕝 Bᴏᴛ.\n 😜Cʀᴇᴀᴛᴇᴅ Fᴏʀ @YTAudio_Channel, 🇾 🇴 🇺  Cᴀɴ Dɪᴡɴʟᴏᴀᴅ Sᴏɴɢᴀ ᴀɴᴅ Mᴜsɪᴄ Fʀᴏᴍ Hᴇʀᴇ.\n ✨Iᴍ Aʟᴡᴀʏs Hᴇʀᴇ Fᴏʀ Yᴏᴜ.
+<b>🇭 🇪 🇾  [{}](tg://user?id={}) ʜᴏᴡ aгε ʏᴏᴜ!! Iᴍ <b>DᴇᴇᴘᴜᴢMᴜsɪᴄᴀʟ</b> Bᴏᴛ.\n 😜Cʀᴇᴀᴛᴇᴅ Fᴏʀ YTAᴜᴅɪᴏ Cʜᴀɴɴᴇʟ. Yᴏᴜ Cᴀɴ Dɪᴡɴʟᴏᴀᴅ Sᴏɴɢᴀ ᴀɴᴅ Mᴜsɪᴄ Fʀᴏᴍ Hᴇʀᴇ.\n\n ✨Iᴍ Aʟᴡᴀʏs Hᴇʀᴇ Fᴏʀ Yᴏᴜ.
 
-😌Jᴜsᴛ Sᴇɴᴅ Mᴇ Tʜᴇ Nᴀᴍᴇ Oғ Sᴏɴɢ/Mᴜsɪᴄ Tʜᴀᴛ Yᴏᴜ Wᴀɴᴛ Tᴏ Dᴏᴡɴʟᴏᴀᴅ. Usᴇ🙄👉 ```/song ``` Tʜɪs Cᴏᴍᴍᴀɴᴅ Bᴇғᴏʀᴇ Sᴏɴɢ/Mᴜsɪᴄ Nᴀᴍᴇ.\n 😜Fᴏʀ Exᴀᴍᴘʟᴇ  ```/song stay``` 
+\n😌Jᴜsᴛ Sᴇɴᴅ Mᴇ Tʜᴇ Nᴀᴍᴇ Oғ Sᴏɴɢ or Mᴜsɪᴄ Tʜᴀᴛ Yᴏᴜ Wᴀɴᴛ Tᴏ Dᴏᴡɴʟᴏᴀᴅ.\n\nFᴏʀ Exᴀᴍᴘʟᴇ  ```/song stay``` 
       
-A Mᴜsɪᴄ Dᴏᴡɴʟᴏᴅᴇʀ Bᴏᴛ Bʏ <b>Dᴇᴇᴘᴜᴢ</b>
+\nA Mᴜsɪᴄ Dᴏᴡɴʟᴏᴅᴇʀ Bᴏᴛ Bʏ <b>Dᴇᴇᴘᴜᴢ</b> </b>
 """
 
 @app.on_message(filters.command("start"))
