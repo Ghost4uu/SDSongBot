@@ -1,4 +1,4 @@
-#SDBOTs <https://t.me/SDBOTs_Inifinity>
+#DeepuzMusicalz
 
 from pyrogram.types.bots_and_keyboards import reply_keyboard_markup
 from SDSongBot.plugins import *
@@ -28,7 +28,7 @@ async def start(client, message):
                         text="🦋Dᴏᴡɴʟᴏᴀᴅ🦋", url="https://t.me/YTAudio_Channel"
                     ),
                     InlineKeyboardButton(
-                        text="👀Sᴜᴘᴘᴏʀᴛ👀", url="https://t.me/Darkridersslk"
+                        text="👀Sᴜᴘᴘᴏʀᴛ👀", url="https://instagram.com/_.deepuz._?utm_medium=copy_link"
                     )
                 ]
             ]
@@ -39,5 +39,5 @@ async def start(client, message):
 
 
 app.start()
-LOGGER.info("✅ SDSongBot is online.")
+LOGGER.info("😌DeepuzMucialz is online.")
 idle()
