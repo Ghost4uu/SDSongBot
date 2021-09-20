@@ -43,7 +43,6 @@ def song(client, message):
                         performer=album.artist,
                     )
 
-        duration = results[0]["duration"]
         url_suffix = results[0]["url_suffix"]
         views = results[0]["views"]
 
