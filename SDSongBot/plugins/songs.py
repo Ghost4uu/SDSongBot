@@ -43,8 +43,6 @@ def song(client, message):
                         performer=album.artist,
                     )
 
-        views = results[0]["views"]
-
     except Exception as e:
         m.edit(
           "<b>🥺 Sᴏʀʀʏ ɴᴏᴛʜɪɴɢ ɪs ғᴏᴜɴᴅ.\n\nTʀʏ ᴀɴᴏᴛʜᴇʀ ᴋᴇʏᴡᴏʀᴇᴅ Oʀ ᴍᴀʏʙᴇ sᴘᴇʟʟ ɪᴛ ᴘʀᴏᴘᴇʀʟʏ 🤪.</b>"
