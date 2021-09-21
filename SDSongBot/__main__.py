@@ -8,7 +8,7 @@ from SDSongBot import SDbot as app
 from SDSongBot import LOGGER
 
 pm_start_text = """
-<b>🇭 🇪 🇾  [{}](tg://user?id={}) ʜᴏᴡ aгε ʏᴏᴜ!! Iᴍ <b>DᴇᴇᴘᴜᴢMᴜsɪᴄᴀʟ</b> Bᴏᴛ.\n 😜Cʀᴇᴀᴛᴇᴅ Fᴏʀ YTAᴜᴅɪᴏ Cʜᴀɴɴᴇʟ. Yᴏᴜ Cᴀɴ Dɪᴡɴʟᴏᴀᴅ Sᴏɴɢᴀ ᴀɴᴅ Mᴜsɪᴄ Fʀᴏᴍ Hᴇʀᴇ.\n\n ✨Iᴍ Aʟᴡᴀʏs Hᴇʀᴇ Fᴏʀ Yᴏᴜ.
+<b>🇭 🇪 🇾  [{}](tg://user?id={}) ʜᴏᴡ aгε ʏᴏᴜ!! \nYTAᴜᴅɪᴏ Cʜᴀɴɴᴇʟ Bᴏᴛ. Yᴏᴜ Cᴀɴ Dɪᴡɴʟᴏᴀᴅ Sᴏɴɢᴀ ᴀɴᴅ Mᴜsɪᴄ Fʀᴏᴍ Hᴇʀᴇ.\n\n ✨Iᴍ Aʟᴡᴀʏs Hᴇʀᴇ Fᴏʀ Yᴏᴜ.
 
 \n😌Jᴜsᴛ Sᴇɴᴅ Mᴇ Tʜᴇ Nᴀᴍᴇ Oғ Sᴏɴɢ or Mᴜsɪᴄ Tʜᴀᴛ Yᴏᴜ Wᴀɴᴛ Tᴏ Dᴏᴡɴʟᴏᴀᴅ.\n\nFᴏʀ Exᴀᴍᴘʟᴇ  ```/song stay``` 
       
@@ -25,10 +25,10 @@ async def start(client, message):
             [
                 [
                      InlineKeyboardButton(
-                        text="🦋Dᴏᴡɴʟᴏᴀᴅ🦋", url="https://t.me/YTAudio_Channel"
+                        text="🦋 Cʜᴀɴɴᴇʟ 🦋", url="https://t.me/YTAudio_Channel"
                     ),
                     InlineKeyboardButton(
-                        text="👀Sᴜᴘᴘᴏʀᴛ👀", url="https://instagram.com/_.deepuz._?utm_medium=copy_link"
+                        text="👀 Sᴜᴘᴘᴏʀᴛ 👀", url="https://instagram.com/_.deepuz._?utm_medium=copy_link"
                     )
                 ]
             ]
