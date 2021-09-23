@@ -17,18 +17,18 @@ pm_start_text = """
 """
 
 @app.on_message(filters.command("start") & filters.private, group=1)
-async def start(client, message, update):
+async def start(client, message):
 
-    update_channel = FORCESUB_CHANNEL 
-    if update_channel: 
+    message_channel = FORCESUB_CHANNEL 
+    if message_channel: 
         try: 
-            user = await bot.get_chat_member(update_channel, update.chat.id) 
+            user = await bot.get_chat_member(message_channel, message.chat.id) 
             if user.status == "kicked": 
-               await update.reply_text("🤭 Sorry Dude, You are B A N N E D 🤣🤣🤣") 
+               await message.reply_text("🤭 Sorry Dude, You are B A N N E D 🤣🤣🤣") 
                return 
         except UserNotParticipant: 
             #await update.reply_text(f"Join @{update_channel} To Use Me") 
-            await update.reply_text( 
+            await message.reply_text( 
                 text=""" <b> 🔊 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗠𝗮𝗶𝗻 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 🤭. 
 Do you want Movies? If u want Movies Join our main Channel.❤️ 
 Then go to the Group and click movie button, You Will get ..!😁 
