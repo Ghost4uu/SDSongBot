@@ -11,7 +11,7 @@ from config import Config
 
 UPDATE_CHANNEL=Config.UPDATE_CHANNEL
 
-pm_start_text = """
+START_TEXT = """
 <b>🇭 🇪 🇾  [{}](tg://user?id={}) ʜᴏᴡ aгε ʏᴏᴜ!! \nYTAᴜᴅɪᴏ Cʜᴀɴɴᴇʟ Bᴏᴛ. Yᴏᴜ Cᴀɴ Dɪᴡɴʟᴏᴀᴅ Sᴏɴɢᴀ ᴀɴᴅ Mᴜsɪᴄ Fʀᴏᴍ Hᴇʀᴇ.\n\n ✨Iᴍ Aʟᴡᴀʏs Hᴇʀᴇ Fᴏʀ Yᴏᴜ.
 
 \n😌Jᴜsᴛ Sᴇɴᴅ Mᴇ Tʜᴇ Nᴀᴍᴇ Oғ Sᴏɴɢ or Mᴜsɪᴄ Tʜᴀᴛ Yᴏᴜ Wᴀɴᴛ Tᴏ Dᴏᴡɴʟᴏᴀᴅ.\n\nFᴏʀ Exᴀᴍᴘʟᴇ  ```/song stay``` 
@@ -19,67 +19,28 @@ pm_start_text = """
 \nA Mᴜsɪᴄ Dᴏᴡɴʟᴏᴅᴇʀ Bᴏᴛ Bʏ <b>Dᴇᴇᴘᴜᴢ</b> </b>
 """
 
-@app.on_message(filters.command("start") & filters.private, group=1)
-async def start(client, message):
-
-    message_channel = FORCESUB_CHANNEL 
-    if message_channel: 
-        try: 
-            user = await message.get_chat_member(message_channel, message.chat.id) 
-            if user.status == "kicked": 
-               await message.reply_text("🤭 Sorry Dude, You are B A N N E D 🤣🤣🤣") 
-               return 
-        except UserNotParticipant: 
-            #await message.reply_text(f"Join @{update_channel} To Use Me") 
-            await message.reply_text( 
-                text=""" <b> 🔊 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗠𝗮𝗶𝗻 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 🤭. 
-Do you want Movies? If u want Movies Join our main Channel.❤️ 
-Then go to the Group and click movie button, You Will get ..!😁 
- 
-⚠️YOU ARE NOT SUBSCRIBED OUR CHANNEL⚠️ 
- 
-Join on our channel to get movies ✅ 
-⬇️Channel link⬇️ </b>""", 
-                reply_markup=InlineKeyboardMarkup([ 
-                    [ InlineKeyboardButton(text="⚡ Join My Channel⚡️", url=f"https://t.me/{message_channel}")] 
-              ]) 
-            ) 
-            return
-
-    chat_id = message.chat.id
-    user_id = message.from_user["id"]
-    name = message.from_user["first_name"]
-    if message.chat.type == "private":
-        btn = InlineKeyboardMarkup(
-            [
-                [
-                     InlineKeyboardButton(
-                        text="🦋 Cʜᴀɴɴᴇʟ 🦋", url="https://t.me/YTAudio_Channel"
-                    ),
-                    InlineKeyboardButton(
-                        text="👀 Sᴜᴘᴘᴏʀᴛ 👀", url="https://instagram.com/_.deepuz._?utm_medium=copy_link"
-                    )
-                ]
-            ]
+START_BUTTONS = InlineKeyboardMarkup(
+            [[
+            InlineKeyboardButton(text="🦋 Cʜᴀɴɴᴇʟ 🦋", url="https://t.me/YTAudio_Channel"),
+            InlineKeyboardButton(text="👀 Sᴜᴘᴘᴏʀᴛ 👀", url="https://instagram.com/_.deepuz._?utm_medium=copy_link")
+            ]]
         )
-    else:
-        btn = None
-    await message.reply_photo(photo="https://telegra.ph/file/fe15aa4dc983df363db11.jpg", caption=pm_start_text.format(name, user_id), reply_markup=btn)
 
-@app.on_message(filters.private & filters.command("start"))
+@app.on_message(filters.command("start") & filters.private, group=1)
 async def start(bot, update):
     update_channel = UPDATE_CHANNEL
     if update_channel:
         try:
             user = await bot.get_chat_member(update_channel, update.chat.id)
-            if user.status == "kicked out":
-               await update.reply_text("😔 Sorry Dude, You are **🅱︎🅰︎🅽︎🅽︎🅴︎🅳︎ 😜**")
+            if user.status == "kicked":
+               await update.reply_text("**🤭 Sorry Dude, You are B A N N E D 🤣🤣🤣**")
                return
         except UserNotParticipant:
-            await update.reply_text(
-                text="<b>Join My Updates Channel To Use This Bot</b>",
+            await update.reply_photo(
+                "https://telegra.ph/file/0ce02ae8a6ade2c5237c9.jpg",
+                caption="<b>Please Join My Updates Channel To Use This Bot</b>",
                 reply_markup=InlineKeyboardMarkup([
-                    [ InlineKeyboardButton(text="Join Updates Channel", url=f"t.me/{Config.UPDATE_CHANNEL}")]
+                    [ InlineKeyboardButton(text="⚡️ Join Updates Channel ⚡️", url=f"t.me/{Config.UPDATE_CHANNEL}")]
               ])
             )
             return
@@ -87,9 +48,9 @@ async def start(bot, update):
             await update.reply_text(f"@{Config.UPDATE_CHANNEL}")
             return  
     reply_markup =  START_BUTTONS
-    await update.reply_text(
-        text=START_TEXT.format(update.from_user.mention),
-        disable_web_page_preview=True,
+    await update.reply_photo(
+        "https://telegra.ph/file/98a2498c7f8220cb902aa.jpg",
+        caption=START_TEXT.format(update.from_user.mention),
         reply_markup=reply_markup,
         quote=True
     )
