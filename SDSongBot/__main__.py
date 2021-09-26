@@ -7,7 +7,7 @@ from pyrogram.errors import UserNotParticipant
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from SDSongBot import SDbot as app
 from SDSongBot import LOGGER
-from config import Config
+from config import UPDATE_CHANNEL
 
 UPDATE_CHANNEL=Config.UPDATE_CHANNEL
 
