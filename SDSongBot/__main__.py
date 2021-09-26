@@ -7,7 +7,9 @@ from pyrogram.errors import UserNotParticipant
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from SDSongBot import SDbot as app
 from SDSongBot import LOGGER
-from config import FORCESUB_CHANNEL
+from config import Config
+
+UPDATE_CHANNEL=Config.UPDATE_CHANNEL
 
 pm_start_text = """
 <b>🇭 🇪 🇾  [{}](tg://user?id={}) ʜᴏᴡ aгε ʏᴏᴜ!! \nYTAᴜᴅɪᴏ Cʜᴀɴɴᴇʟ Bᴏᴛ. Yᴏᴜ Cᴀɴ Dɪᴡɴʟᴏᴀᴅ Sᴏɴɢᴀ ᴀɴᴅ Mᴜsɪᴄ Fʀᴏᴍ Hᴇʀᴇ.\n\n ✨Iᴍ Aʟᴡᴀʏs Hᴇʀᴇ Fᴏʀ Yᴏᴜ.
@@ -63,6 +65,34 @@ Join on our channel to get movies ✅
     else:
         btn = None
     await message.reply_photo(photo="https://telegra.ph/file/fe15aa4dc983df363db11.jpg", caption=pm_start_text.format(name, user_id), reply_markup=btn)
+
+@app.on_message(filters.private & filters.command("start"))
+async def start(bot, update):
+    update_channel = UPDATE_CHANNEL
+    if update_channel:
+        try:
+            user = await bot.get_chat_member(update_channel, update.chat.id)
+            if user.status == "kicked out":
+               await update.reply_text("😔 Sorry Dude, You are **🅱︎🅰︎🅽︎🅽︎🅴︎🅳︎ 😜**")
+               return
+        except UserNotParticipant:
+            await update.reply_text(
+                text="<b>Join My Updates Channel To Use This Bot</b>",
+                reply_markup=InlineKeyboardMarkup([
+                    [ InlineKeyboardButton(text="Join Updates Channel", url=f"t.me/{Config.UPDATE_CHANNEL}")]
+              ])
+            )
+            return
+        except Exception:
+            await update.reply_text(f"@{Config.UPDATE_CHANNEL}")
+            return  
+    reply_markup =  START_BUTTONS
+    await update.reply_text(
+        text=START_TEXT.format(update.from_user.mention),
+        disable_web_page_preview=True,
+        reply_markup=reply_markup,
+        quote=True
+    )
 
 
 app.start()
