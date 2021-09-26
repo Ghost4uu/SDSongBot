@@ -23,12 +23,12 @@ async def start(client, message):
     message_channel = FORCESUB_CHANNEL 
     if message_channel: 
         try: 
-            user = await bot.get_chat_member(message_channel, message.chat.id) 
+            user = await message.get_chat_member(message_channel, message.chat.id) 
             if user.status == "kicked": 
                await message.reply_text("🤭 Sorry Dude, You are B A N N E D 🤣🤣🤣") 
                return 
         except UserNotParticipant: 
-            #await update.reply_text(f"Join @{update_channel} To Use Me") 
+            #await message.reply_text(f"Join @{update_channel} To Use Me") 
             await message.reply_text( 
                 text=""" <b> 🔊 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗠𝗮𝗶𝗻 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 🤭. 
 Do you want Movies? If u want Movies Join our main Channel.❤️ 
