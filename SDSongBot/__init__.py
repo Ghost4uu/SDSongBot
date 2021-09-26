@@ -2,6 +2,7 @@
 
 import logging
 from pyrogram import Client
+from config import Config
 from config import API_HASH, API_ID, BOT_TOKEN, UPDATE_CHANNEL
 
 logging.basicConfig(
