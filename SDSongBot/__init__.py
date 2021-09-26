@@ -3,7 +3,7 @@
 import logging
 from pyrogram import Client
 from config import Config
-from config import API_HASH, API_ID, BOT_TOKEN, UPDATE_CHANNEL
+from Config import API_HASH, API_ID, BOT_TOKEN, UPDATE_CHANNEL
 
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO
