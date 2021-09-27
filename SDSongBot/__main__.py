@@ -48,7 +48,7 @@ async def start(bot, update):
     reply_markup =  START_BUTTONS
     await update.reply_photo(
         "https://telegra.ph/file/98a2498c7f8220cb902aa.jpg",
-        caption = START_TEXT.format(update.from_user.mention),
+        caption=START_TEXT.format(update.from_user.mention),
         reply_markup=reply_markup,
     )
 
