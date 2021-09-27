@@ -9,8 +9,6 @@ from SDSongBot import SDbot as app
 from SDSongBot import LOGGER
 from config import UPDATE_CHANNEL
 
-UPDATE_CHANNEL=Config.UPDATE_CHANNEL
-
 START_TEXT = """
 <b>🇭 🇪 🇾  [{}](tg://user?id={}) ʜᴏᴡ aгε ʏᴏᴜ!! \nYTAᴜᴅɪᴏ Cʜᴀɴɴᴇʟ Bᴏᴛ. Yᴏᴜ Cᴀɴ Dɪᴡɴʟᴏᴀᴅ Sᴏɴɢᴀ ᴀɴᴅ Mᴜsɪᴄ Fʀᴏᴍ Hᴇʀᴇ.\n\n ✨Iᴍ Aʟᴡᴀʏs Hᴇʀᴇ Fᴏʀ Yᴏᴜ.
 
