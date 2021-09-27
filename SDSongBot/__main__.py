@@ -36,7 +36,7 @@ async def start(bot, update):
         except UserNotParticipant:
             await update.reply_photo(
                 "https://telegra.ph/file/0ce02ae8a6ade2c5237c9.jpg",
-                caption="<b>Please Join My Updates Channel To Use This Bot</b>",
+                caption = "<b>Please Join My Updates Channel To Use This Bot</b>",
                 reply_markup=InlineKeyboardMarkup([
                     [ InlineKeyboardButton(text="⚡️ Join Updates Channel ⚡️", url=f"t.me/{UPDATE_CHANNEL}")]
               ])
