@@ -38,12 +38,12 @@ async def start(bot, update):
                 "https://telegra.ph/file/0ce02ae8a6ade2c5237c9.jpg",
                 caption="<b>Please Join My Updates Channel To Use This Bot</b>",
                 reply_markup=InlineKeyboardMarkup([
-                    [ InlineKeyboardButton(text="⚡️ Join Updates Channel ⚡️", url=f"t.me/{Config.UPDATE_CHANNEL}")]
+                    [ InlineKeyboardButton(text="⚡️ Join Updates Channel ⚡️", url=f"t.me/{UPDATE_CHANNEL}")]
               ])
             )
             return
         except Exception:
-            await update.reply_text(f"@{Config.UPDATE_CHANNEL}")
+            await update.reply_text(f"@UPDATE_CHANNEL}")
             return  
     reply_markup =  START_BUTTONS
     await update.reply_photo(
