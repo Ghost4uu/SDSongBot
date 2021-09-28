@@ -24,7 +24,7 @@ def song(client, message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply_photo(photo="https://telegra.ph/file/42f27692a140e79b69c04.jpg",caption="<b>🔎 Fɪɴᴅɪɴɢ ᴛʜᴇ sᴏɴɢ....</b>")
+    m = message.reply_photo(photo="https://telegra.ph/file/9d398ee0ccdf51c1cb9c0.jpg",caption="<b>🔎 Fɪɴᴅɪɴɢ ᴛʜᴇ sᴏɴɢ....</b>")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
