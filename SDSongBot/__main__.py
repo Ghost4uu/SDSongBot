@@ -12,7 +12,7 @@ from config import UPDATE_CHANNEL
 START_BUTTONS = InlineKeyboardMarkup(
             [[
             InlineKeyboardButton(text="🦋 Cʜᴀɴɴᴇʟ 🦋", url="https://t.me/YTAudio_Channel"),
-            InlineKeyboardButton(text="👀 Sᴜᴘᴘᴏʀᴛ 👀", url="https://instagram.com/_.deepuz._?utm_medium=copy_link")
+            InlineKeyboardButton(text="👀 Sᴜᴘᴘᴏʀᴛ 👀", url="https://t.me/Deepu_Z")
             ]]
         )
 
@@ -40,7 +40,7 @@ async def start(bot, update):
     reply_markup =  START_BUTTONS
     await update.reply_photo(
         "https://telegra.ph/file/b9bb51cbbbd3a5fd0c389.jpg",
-        caption=f"<b>🇭 🇪 🇾  {update.from_user.first_name} ʜᴏᴡ aгε ʏᴏᴜ!! \nIᴍ YTAᴜᴅɪᴏ Cʜᴀɴɴᴇʟ Bᴏᴛ. Yᴏᴜ Cᴀɴ Dɪᴡɴʟᴏᴀᴅ Sᴏɴɢᴀ ᴀɴᴅ Mᴜsɪᴄ Fʀᴏᴍ Hᴇʀᴇ.\n\n ✨Iᴍ Aʟᴡᴀʏs Hᴇʀᴇ Fᴏʀ Yᴏᴜ.\n\n😌Jᴜsᴛ Sᴇɴᴅ Mᴇ Tʜᴇ Nᴀᴍᴇ Oғ Sᴏɴɢ or Mᴜsɪᴄ Tʜᴀᴛ Yᴏᴜ Wᴀɴᴛ Tᴏ Dᴏᴡɴʟᴏᴀᴅ.\n\nFᴏʀ Exᴀᴍᴘʟᴇ  ```/song stay``` \nA Mᴜsɪᴄ Dᴏᴡɴʟᴏᴅᴇʀ Bᴏᴛ Bʏ <b>Dᴇᴇᴘᴜᴢ</b> </b>",
+        caption=f"<b>🇭 🇪 🇾  {update.from_user.first_name} ʜᴏᴡ aгε ʏᴏᴜ!! \nIᴍ YTAᴜᴅɪᴏ Cʜᴀɴɴᴇʟ Bᴏᴛ. Yᴏᴜ Cᴀɴ Dɪᴡɴʟᴏᴀᴅ Sᴏɴɢᴀ ᴀɴᴅ Mᴜsɪᴄ Fʀᴏᴍ Hᴇʀᴇ.\n\n ✨Iᴍ Aʟᴡᴀʏs Hᴇʀᴇ Fᴏʀ Yᴏᴜ.\n\n😌Jᴜsᴛ Sᴇɴᴅ Mᴇ Tʜᴇ Nᴀᴍᴇ Oғ Sᴏɴɢ or Mᴜsɪᴄ Tʜᴀᴛ Yᴏᴜ Wᴀɴᴛ Tᴏ Dᴏᴡɴʟᴏᴀᴅ.\n\nFᴏʀ Exᴀᴍᴘʟᴇ  ```/song stay``` \n\nA Mᴜsɪᴄ Dᴏᴡɴʟᴏᴅᴇʀ Bᴏᴛ Bʏ <b>Dᴇᴇᴘᴜᴢ</b> </b>",
         reply_markup=reply_markup,
     )
 
