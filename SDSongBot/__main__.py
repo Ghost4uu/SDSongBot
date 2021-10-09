@@ -12,7 +12,7 @@ from config import UPDATE_CHANNEL
 START_BUTTONS = InlineKeyboardMarkup(
             [[
             InlineKeyboardButton(text="🦋 Cʜᴀɴɴᴇʟ 🦋", url="https://t.me/YTAudio_Channel"),
-            InlineKeyboardButton(text="👀 Sᴜᴘᴘᴏʀᴛ 👀", url="https://t.me/Deepu_Z")
+            InlineKeyboardButton(text="👀 Sᴜᴘᴘᴏʀᴛ 👀", url="https://t.me/Tizwizlik")
             ]]
         )
 
@@ -28,7 +28,7 @@ async def start(bot, update):
         except UserNotParticipant:
             await update.reply_photo(
                 "https://telegra.ph/file/0ce02ae8a6ade2c5237c9.jpg",
-                caption="<b>Please Join My Updates Channel To Use This Bot</b>",
+                caption="<b>Please Join My Updates Channel To Use This Bot ❗To Use The Bot You Must Join ❗</b>",
                 reply_markup=InlineKeyboardMarkup([
                     [ InlineKeyboardButton(text="⚡️ Join Updates Channel ⚡️", url=f"t.me/{UPDATE_CHANNEL}")]
               ])
